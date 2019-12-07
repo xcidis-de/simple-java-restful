@@ -4,3 +4,7 @@ target
 # idea IDE
 .idea
 NexemServe.iml
+
+# properties
+src/main/resources/application.yml
+src/main/resources/application.yml
