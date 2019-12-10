@@ -1,4 +1,4 @@
-package com.nexem.serve.utils.http;
+package com.jmstextbot.dreamteam.utils.http;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -38,9 +38,9 @@ public class Response extends HttpEntity implements Serializable {
             return new ResponseInfo(sb.toString(), code);
         }
 
-        Boolean forbidden = Pattern.matches("4\\d\\d", code);
+        Boolean clientError = Pattern.matches("4\\d\\d", code);
 
-        if (forbidden) {
+        if (clientError) {
             sb.append(" failed due to client error.");
             return new ResponseInfo(sb.toString(), code);
         }
